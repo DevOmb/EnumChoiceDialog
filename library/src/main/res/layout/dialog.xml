@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dialog_layout"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/dialog_background"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/dialog_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Dialog"
+        android:textSize="20sp" />
+
+    <com.devomb.enumchoicedialog.Views.MaxHeightScrollView
+        android:id="@+id/dialog_options_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dialog_title"
+        android:scrollbars="none"
+        app:maxHeight="140dp">
+
+        <RadioGroup
+            android:id="@+id/dialog_options"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.devomb.enumchoicedialog.Views.MaxHeightScrollView>
+
+    <TextView
+        android:id="@+id/accept_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/dialog_options_scroll"
+        android:background="@color/transparent"
+        android:padding="8dp"
+        android:text="Accept"
+        android:textAllCaps="true"
+        android:textStyle="bold" />
+
+</RelativeLayout>
